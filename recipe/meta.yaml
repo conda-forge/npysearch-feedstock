@@ -1,5 +1,5 @@
 {% set name = "npysearch" %}
-{% set version = "1.2.0" %}
+{% set version = "1.3.0" %}
 
 
 package:
@@ -8,11 +8,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/npysearch-{{ version }}.tar.gz
-  sha256: 5ccd2da50ec0273d07bd0e3207990559a9674d4b25291d762fb2ec152f57f4ee
+  sha256: 70dbf899fcc33f5e1b71b226bf28d58a9fc5213e8e337e5fb2ac6d121ef849a8
 
 build:
-  number: 1
-  skip: true   # [py2k]
+  number: 0
+  skip: true  # [py2k]
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
