@@ -11,13 +11,14 @@ source:
   sha256: 03c4b7a3be80f5168e6df3f9dc57cdca71d822f09a3a5d90994c308334a53f46
 
 build:
-  number: 0
+  number: 1
   skip: true  # [py2k]
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
     - {{ compiler('cxx') }}
+    - {{ stdlib("c") }}
   host:
     - pip
     - pybind11
